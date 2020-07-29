@@ -1,0 +1,66 @@
+<div class="showdata">
+  <div class="title" changeTextColor>SHOWDATA</div>
+
+  <b>Localdata</b>
+  <div>
+    {{ localdata1 }}
+  </div>
+  <br />
+
+  <b>From service</b>
+  <div *ngIf="true; then template1; else template2"></div>
+  <div>
+    {{ serviceData.counter }}
+  </div>
+  <br />
+
+  <b>From parent</b>
+  <div>
+    {{ d1 }}<br />
+    {{ d2 }}
+  </div>
+  <br />
+
+  <b>From parent - ng-content</b>
+  <ng-content select="[attr1]"></ng-content>
+  <ng-content select="[attr2]"></ng-content><br />
+
+  <b>From parent - array</b>
+  <div>
+    <input type="text" #inputType [(ngModel)]="type" />
+    <input type="number" [(ngModel)]="count" />
+    <button (click)="addData()">Add</button>
+  </div>
+  <div>
+    <app-elem *ngFor="let item of arr_data" [el]="item"></app-elem>
+  </div>
+  <br />
+  <div>
+    <table *ngIf="arr_data.length > 0">
+      <thead>
+        <th>#</th>
+        <th>Type</th>
+        <th>Count</th>
+      </thead>
+      <tr *ngFor="let item of arr_data; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.count }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<ng-template #template1>
+  <ul>
+    <li *ngFor="let person of persons; let i = index">
+      {{ showPerson(i + 1, person) }}
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #template2>
+  <div>
+    No info
+  </div>
+</ng-template>

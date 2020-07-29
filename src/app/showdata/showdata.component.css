@@ -1,0 +1,18 @@
+.showdata {
+  margin-bottom: 1rem;
+  border: 2px dashed #ccc;
+}
+
+.title {
+  color: darkblue;
+  text-align: center;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  font-size: small;
+}

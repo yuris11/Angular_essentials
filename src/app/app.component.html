@@ -1,0 +1,14 @@
+<div class="app">
+  <div class="title">APP component</div>
+
+  <app-showdata
+    [d1]="data1"
+    [d2]="data2"
+    [arr_data]="arr_data"
+    (onAddData)="updateDataArr($event)"
+  >
+    <div attr1><small>for-ng-content1</small></div>
+    <div attr2><small>for-ng-content2</small></div>
+  </app-showdata>
+  <app-controls (bClickEvent)="showCounter($event)"></app-controls>
+</div>

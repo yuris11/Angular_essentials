@@ -1,0 +1,25 @@
+div.controls {
+  margin-bottom: 1rem;
+  border: 2px dashed #ccc;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.lgreen {
+  color: lightseagreen;
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.title {
+  color: darkblue;
+  text-align: center;
+  font-weight: bold;
+}

@@ -1,0 +1,41 @@
+<div class="controls">
+  <div class="title">CONTROLS</div>
+  <img [src]="image_test" />
+  <div>
+    {{ counter_data }}
+  </div>
+
+  <div>
+    <button (click)="btnClicked()">+</button>
+    <button (click)="resetCounter()">reset</button>
+  </div>
+  <div>
+    <button (click)="txt_color = 'red'">red</button>
+    <button (click)="txt_color = 'lgreen'">lgreen</button>
+    <button (click)="txt_color = 'blue'">blue</button>
+  </div>
+
+  <!-- <div
+  [ngStyle]="{
+    color: title.length > 8 ? 'red' : 'green',
+    'font-weight': title.length > 4 ? 'bold' : 'normal'
+  }"
+> -->
+  <!-- <div
+  [ngClass]="{
+    red: txt_color === 'red',
+    lgreen: txt_color === 'lgreen',
+    blue: txt_color === 'blue'
+  }"
+> -->
+  <div
+    [class.red]="txt_color === 'red'"
+    [class.lgreen]="txt_color === 'lgreen'"
+    [class.blue]="txt_color === 'blue'"
+  >
+    {{ title }}<br />
+    <!-- <input type="text" (input)="onInput($event)" [value]="title" /> -->
+    <!-- <input type="text" #inp1 (input)="onInput(inp1.value)" [value]="title" /> -->
+    <input type="text" [(ngModel)]="title" (ngModelChange)="onModelChange()" />
+  </div>
+</div>
