@@ -1,5 +1,6 @@
+// Сервис
 import { Injectable } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 export interface IPerson {
   name: string;
