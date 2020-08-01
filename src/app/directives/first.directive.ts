@@ -20,4 +20,3 @@ export class FirstDirective {
     this.r.setStyle(this.el.nativeElement, 'font-size', 'small');
   }
 }
-``;

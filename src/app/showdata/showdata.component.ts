@@ -28,7 +28,7 @@ export class ShowdataComponent implements OnInit {
 
   @Input('d1') d1: string;
   @Input('d2') d2: string;
-  @Input() arr_data: IArrElement[]; //from parent
+  @Input() arr_data: IArrElement[]; //data from parent
 
   @ViewChild('inputType', { static: true }) inputTypeInit: ElementRef;
   @ViewChild('inputType', { static: false }) inputTypeBtn: ElementRef;
